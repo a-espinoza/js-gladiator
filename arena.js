@@ -1,13 +1,16 @@
-class Weapon {
-  constructor (name){
-    this.name = this validate
+class Arena{
+  constructor(name){
+    this.gladiator = []
+    this.name = capitalizeFirstLetter (name);
   }
+  addGladiator (name){
+    this.gladiator.push(name);
+}
 }
 
-class Gladiator {
-  constructor (name, weapon){
-    this.name = name,
-    this.weapon = weapon,
-  }
+function capitalizeFirstLetter (inStr){
+  return inStr.replace(/\w\S*/g, function (name2){
+     return name2.charAt(0).toUpperCase() +name2.substr(1).toLowerCase();
 
+   });
 }
